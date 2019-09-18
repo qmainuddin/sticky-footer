@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer/">
+
+    <title>Sticky Footer Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Sticky footer</h1>
+        </div>
+        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom
+            HTML and CSS.</p>
+        <p>Use <a href="../sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p>
+        <table id="myTable">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var index = 1;
+        $(document).ready(function () {
+            for (var i = 1; i <= 60; i++) {
+                $('#myTable tr:last').after('<tr><td>' + i + '</td><td>Mainuddin<td><td>Mainuddin<td></tr>');
+            }
+            index = 60;
+        });
+
+        $(window).scroll(function(){
+            if(index <= 200){
+                for (var j = 1; j <= 20; j++) {
+                $('#myTable tr:last').after('<tr><td>' + index++ + '</td><td>Mainuddin<td><td>Mainuddin<td></tr>');
+            }
+            }
+        });
+    </script>
+</body>
+
+</html>
